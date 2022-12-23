@@ -37,3 +37,6 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+-- markdown
+require'lspconfig'.prosemd_lsp.setup{}

@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use 'lervag/vimtex'
+
   if packer_bootstrap then
     require('packer').sync()
   end

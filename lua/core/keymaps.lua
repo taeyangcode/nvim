@@ -2,9 +2,9 @@
 vim.g.mapleader = ' '
 
 -- indentation
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- line number
@@ -15,6 +15,9 @@ vim.go.scrolloff = 8
 -- vim.go.termguicolors = true
 vim.go.background = "dark"
 vim.cmd[[colorscheme iceberg]]
+
+-- encoding
+vim.cmd('filetype plugin indent on')
 
 -- telescope keymaps
 local builtin = require('telescope.builtin')

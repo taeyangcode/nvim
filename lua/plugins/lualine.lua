@@ -4,7 +4,7 @@ return {
         local lualine = require "lualine"
 
         local function section_cat()
-            return [[^.ᆽ.^= ∫]]
+            return [[^.ᆽ.^=∫]]
         end
 
         lualine.setup {

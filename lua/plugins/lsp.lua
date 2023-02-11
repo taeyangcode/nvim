@@ -15,23 +15,19 @@ return {
             automatic_installation = true,
         }
 
-        require "lspconfig".clangd.setup {}
-        require "lspconfig".cssls.setup {}
-        require "lspconfig".cssmodules_ls.setup {}
-        require "lspconfig".dockerls.setup {}
-        require "lspconfig".html.setup {}
-        require "lspconfig".jsonls.setup {}
-        require "lspconfig".jdtls.setup {}
-        require "lspconfig".tsserver.setup {}
-        require "lspconfig".ltex.setup {}
-        require "lspconfig".sumneko_lua.setup {}
-        require "lspconfig".marksman.setup {}
-        require "lspconfig".rust_analyzer.setup {}
-        require "lspconfig".sqlls.setup {}
-        require "lspconfig".svelte.setup {}
-        require "lspconfig".tailwindcss.setup {}
-        require "lspconfig".vimls.setup {}
-        require "lspconfig".vuels.setup {}
-        require "lspconfig".yamlls.setup {}
+        local lspconfig = require "lspconfig"
+        for _, server in pairs(lsp_languages) do
+            lspconfig[server].setup {}
+        end
+
+        lspconfig.sumneko_lua.setup {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    },
+                },
+            },
+        }
     end
 }

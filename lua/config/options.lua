@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.cmd("highlight EndOfBuffer guifg=bg") -- Set non text characters to background color
+vim.cmd("set fillchars=fold:\\ ,vert:\\│,eob:\\ ,msgsep:‾")
 
 local options = {
     clipboard = "unnamedplus", -- Enable yanking to clipboard

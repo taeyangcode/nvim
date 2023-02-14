@@ -1,4 +1,4 @@
-local lsp_languages = { "clangd", "cssls", "cssmodules_ls", "dockerls", "html", "jsonls", "jdtls", "tsserver", "ltex", "sumneko_lua", "marksman", "rust_analyzer", "sqlls", "svelte", "tailwindcss", "texlab", "vimls", "vuels", "yamlls" }
+local lsp_languages = { "clangd", "cssls", "cssmodules_ls", "dockerls", "html", "jsonls", "jdtls", "tsserver", "ltex", "lua_ls", "marksman", "rust_analyzer", "sqlls", "svelte", "tailwindcss", "texlab", "vimls", "vuels", "yamlls" }
 
 return {
     "williamboman/mason.nvim",
@@ -20,7 +20,7 @@ return {
             lspconfig[server].setup {}
         end
 
-        lspconfig.sumneko_lua.setup {
+        lspconfig.lua_ls.setup {
             settings = {
                 Lua = {
                     diagnostics = {

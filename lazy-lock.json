@@ -20,5 +20,6 @@
   "poimandres.nvim": { "branch": "main", "commit": "be4ea8d437cd963550d102d90415962e9734f909" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
   "trouble.nvim": { "branch": "main", "commit": "556ef3089709a6e253df1e500381fec5eb48e48a" },
-  "vim-vsnip": { "branch": "master", "commit": "8dde8c0ef10bb1afdbb301e2bd7eb1c153dd558e" }
+  "vim-vsnip": { "branch": "master", "commit": "8dde8c0ef10bb1afdbb301e2bd7eb1c153dd558e" },
+  "vimtex": { "branch": "master", "commit": "cb1460f6e6160a855bf83d93d9a34bb944f6b540" }
 }

@@ -13,7 +13,7 @@ local options = {
     showmode = false, -- Hide the current mode (normally displayed below status line)
     scrolloff = 8,
     signcolumn = "number",
-    spelllang = { "en_us", "kr_ko", "cjk" },
+    spelllang = { "en_us", "cjk" },
     termguicolors = true,
     wrap = true,
 
@@ -27,7 +27,7 @@ local options = {
 
 -- Helper function to enable each of the options supplied in the argument
 -- @param options Table that consists of key value vim options
-function set_options(options)
+local function set_options(options)
     local option = vim.opt
 
     for option_name, option_value in pairs(options) do

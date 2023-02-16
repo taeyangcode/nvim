@@ -31,6 +31,7 @@ autocommand("Filetype", {
         vim.bo.softtabstop = 0
         vim.bo.shiftwidth = 4
         vim.bo.autoindent = true
+        vim.opt.spell = true
     end,
     desc = [[
         Indentation configuration

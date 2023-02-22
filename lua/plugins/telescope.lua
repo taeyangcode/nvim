@@ -8,11 +8,11 @@ return {
         local telescope = require "telescope"
 
         telescope.setup {
---            pickers = {
---                find_files = {
---                    theme = "Poimandres",
---                },
---            },
+            pickers = {
+                find_files = {
+                    theme = "poimandres",
+                },
+            },
         }
 
         local builtin = require "telescope.builtin"

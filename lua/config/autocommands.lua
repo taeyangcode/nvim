@@ -1,7 +1,7 @@
 local autocommand = vim.api.nvim_create_autocmd
 
 local language_pattern = { "cpp", "c", "rust", "typescript", "typescriptreact", "javascript", "javascriptreact", "lua" }
-local text_pattern = { "html", "css", "scss", "markdown", "text" }
+local text_pattern = { "html", "css", "scss", "markdown", "text", "tex", "latex" }
 
 autocommand("Filetype", {
     pattern = language_pattern,

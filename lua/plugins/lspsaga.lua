@@ -6,6 +6,10 @@ return {
     },
     config = function()
         local lspsaga = require "lspsaga"
-        lspsaga.setup {}
+        lspsaga.setup {
+            diagnostic = {
+                on_insert = false,
+            },
+        }
     end,
 }

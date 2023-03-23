@@ -1,4 +1,4 @@
-local lsp_languages = { "clangd", "cssls", "cssmodules_ls", "dockerls", "html", "jsonls", "jdtls", "tsserver", "ltex", "lua_ls", "marksman", "rust_analyzer", "sqlls", "svelte", "tailwindcss", "texlab", "vimls", "vuels", "yamlls" }
+local lsp_languages = { "clangd", "cssls", "cssmodules_ls", "dockerls", "html", "jsonls", "jdtls", "tsserver", "ltex", "lua_ls", "marksman", "pylsp", "rust_analyzer", "sqlls", "svelte", "tailwindcss", "texlab", "vimls", "vuels", "yamlls" }
 
 return {
     "williamboman/mason.nvim",

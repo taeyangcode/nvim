@@ -35,3 +35,5 @@ local function set_options(options)
     end
 end
 set_options(options)
+
+vim.api.nvim_set_keymap("n", "<Leader>p", ":echo expand('%:p')<CR>", { noremap = true })

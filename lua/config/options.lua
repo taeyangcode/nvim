@@ -52,3 +52,6 @@ vim.api.nvim_set_keymap("n", "<Leader>p", "", {
     callback = pdf_path,
     noremap = true
 })
+
+-- Keymap to Open Nvim File Tree
+vim.keymap.set("n", "<C-f>", ":NvimTreeOpen<CR>", { noremap = true })

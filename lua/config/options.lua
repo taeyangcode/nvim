@@ -36,4 +36,19 @@ local function set_options(options)
 end
 set_options(options)
 
-vim.api.nvim_set_keymap("n", "<Leader>p", ":echo expand('%:p')<CR>", { noremap = true })
+local function pdf_path()
+    local path = vim.api.nvim_exec([[ echo expand('%:p') ]], true)
+    for index = string.len(path), 1, -1 do
+        if string.sub(path, index, index) == "." then
+            local pdf = string.sub(path, 0, index).."pdf"
+            local command = [[ :call setreg('*', " ]] .. pdf .. [[ ") ]]
+            vim.cmd(command)
+            return print(string.sub(path, 0, index).."pdf")
+        end
+    end
+    return print("Could not locate file path.")
+end
+vim.api.nvim_set_keymap("n", "<Leader>p", "", {
+    callback = pdf_path,
+    noremap = true
+})

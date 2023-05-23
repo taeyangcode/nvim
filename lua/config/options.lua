@@ -41,9 +41,8 @@ local function pdf_path()
     for index = string.len(path), 1, -1 do
         if string.sub(path, index, index) == "." then
             local pdf = string.sub(path, 0, index).."pdf"
-            local command = [[ :call setreg('*', " ]] .. pdf .. [[ ") ]]
-            vim.cmd(command)
-            return print(string.sub(path, 0, index).."pdf")
+            os.execute("open -a firefox -g " .. pdf)
+            return print(string.sub(path, 0, index).."pdf - opened.")
         end
     end
     return print("Could not locate file path.")

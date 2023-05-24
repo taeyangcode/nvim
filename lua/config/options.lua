@@ -42,7 +42,7 @@ local function pdf_path()
         if string.sub(path, index, index) == "." then
             local pdf = string.sub(path, 0, index).."pdf"
             os.execute("open -a firefox -g " .. pdf)
-            return print(string.sub(path, 0, index).."pdf - opened.")
+            return print(pdf .. " - opened.")
         end
     end
     return print("Could not locate file path.")

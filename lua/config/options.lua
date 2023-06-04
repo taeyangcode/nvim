@@ -18,7 +18,7 @@ local options = {
     wrap = true,
 
     -- Default indentation
-    expandtab = true,
+    expandtab = false,
     tabstop = 8,
     softtabstop = 0,
     shiftwidth = 4,
@@ -36,19 +36,19 @@ local function set_options(options)
 end
 set_options(options)
 
-local function pdf_path()
+local function open_tex_pdf()
     local path = vim.api.nvim_exec([[ echo expand('%:p') ]], true)
     for index = string.len(path), 1, -1 do
         if string.sub(path, index, index) == "." then
             local pdf = string.sub(path, 0, index).."pdf"
-            os.execute("open -a firefox -g " .. pdf)
-            return print(pdf .. " - opened.")
+            vim.fn.jobstart("zathura " .. pdf .. " && beep")
+            return
         end
     end
-    return print("Could not locate file path.")
+    print("Could not locate file path.")
 end
 vim.api.nvim_set_keymap("n", "<Leader>p", "", {
-    callback = pdf_path,
+    callback = open_tex_pdf,
     noremap = true
 })
 

@@ -8,15 +8,11 @@ return {
 
         vim.cmd([[
             let g:vimtex_view_method = "zathura"
-            let g:Tex_IgnoredWarnings = 
-                \'Underfull'."\n".
-                \'Overfull'."\n".
-                \'specifier changed to'."\n".
-                \'You have requested'."\n".
-                \'Missing number, treated as zero.'."\n".
-                \'There were undefined references'."\n".
-                \'Citation %.%# undefined'."\n".
-                \'Double space found.'."\n"
+            let g:vimtex_quickfix_ignore_all_warnings = 0
+            let g:vimtex_quickfix_ignore_filters = [
+                  \ 'Underfull',
+                  \ 'Overfull',
+                  \]
             let g:Tex_IgnoreLevel = 10000
         ]])
     end,

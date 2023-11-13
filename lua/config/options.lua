@@ -47,10 +47,10 @@ local function open_tex_pdf()
     end
     print("Could not locate file path.")
 end
+
 vim.api.nvim_set_keymap("n", "<Leader>p", "", {
     callback = open_tex_pdf,
     noremap = true
 })
 
--- Keymap to Open Nvim File Tree
-vim.keymap.set("n", "<C-f>", ":NvimTreeOpen<CR>", { noremap = true })
+vim.keymap.set("n", "<C-f>", ":lua MiniFiles.open()<CR>", { noremap = true })

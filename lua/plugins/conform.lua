@@ -5,6 +5,8 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				tex = { "latexindent" },
+                                typescript = { "prettier" },
+                                ["_"] = { "prettier" },
 			},
 		})
 	end,

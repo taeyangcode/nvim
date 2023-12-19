@@ -6,6 +6,7 @@ return {
 				lua = { "stylua" },
 				tex = { "latexindent" },
                                 typescript = { "prettier" },
+                                rust = { "rustfmt" },
                                 ["_"] = { "prettier" },
 			},
 		})

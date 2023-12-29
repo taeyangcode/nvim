@@ -7,7 +7,6 @@ return {
 				tex = { "latexindent" },
                                 typescript = { "prettier" },
                                 rust = { "rustfmt" },
-                                ["_"] = { "prettier" },
 			},
 		})
 	end,

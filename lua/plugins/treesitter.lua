@@ -2,6 +2,7 @@ local treesitter_lanugages = { "c", "cmake", "cpp", "css", "dockerfile", "git_re
 
 return {
     "nvim-treesitter/nvim-treesitter",
+    tag = "v0.9.0",
     build = ":TSUpdate",
     init = function()
         require "nvim-treesitter.configs".setup {

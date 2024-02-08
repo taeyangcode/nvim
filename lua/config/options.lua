@@ -53,4 +53,4 @@ vim.api.nvim_set_keymap("n", "<Leader>p", "", {
     noremap = true
 })
 
-vim.keymap.set("n", "<C-f>", ":lua MiniFiles.open()<CR>", { noremap = true })
+vim.keymap.set("n", "<C-f>", ":lua MiniFiles.open()<CR>", { noremap = true, silent = true })

@@ -11,16 +11,7 @@ autocommand("Filetype", {
         vim.bo.softtabstop = 0
         vim.bo.shiftwidth = 4
         vim.bo.autoindent = true
-    end,
-    desc = [[
-        Indentation configuration
-
-        Enabled filetypes: 
-            cpp, hpp, c, h, rs, ts, tsx, js, jsx, lua
-        Indentation details:
-            Tabs that consist of four columns/spaces
-            Autoindent
-    ]],
+    end
 })
 
 autocommand("Filetype", {

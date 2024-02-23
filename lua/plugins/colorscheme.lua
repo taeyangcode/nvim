@@ -3,7 +3,9 @@ local colorscheme_configs = {
         url = "olivercederborg/poimandres.nvim",
         config = function()
             vim.g.background = "light"
-            require "poimandres".setup {}
+            require("poimandres").setup {
+                disable_background = true,
+            }
             vim.cmd("colorscheme poimandres")
         end,
     },
